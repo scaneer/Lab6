@@ -67,12 +67,13 @@ void StackLinked<T>::popAll()
 template < class T >
 T* StackLinked<T>::peek()
 {
-   T* item = NULL;
-   if(!isEmpty())
-   {
-	item = top;  
-   }
-   return item;
+	T* item = NULL;
+	if(!isEmpty())
+	{
+		NextNode<T>* node = top->getNext();
+		item = node->getItem();
+	}
+	return item;
 }
 
 template < class T >
