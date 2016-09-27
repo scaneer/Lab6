@@ -93,11 +93,11 @@ T* StackLinked<T>::pop()
    if(!isEmpty())
    {
 	item = top; 
+	delete top;
 	top = item->getNext();
 	
    }
    return item;
-   delete item;
 }
 
 #endif
