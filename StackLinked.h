@@ -80,7 +80,7 @@ void StackLinked<T>::push(T* item)
 {
 	NextNode<T>* node = item;
 	node->setNext(top);
-	node = top;
+	top = node;
 	return node;
 }
 
@@ -93,6 +93,7 @@ T* StackLinked<T>::pop()
    if(!isEmpty())
    {
 	item = top; 
+	top = item->getNext();
 	
    }
    return item;
