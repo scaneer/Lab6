@@ -78,10 +78,11 @@ bool Maze::isSolved(Cell* curr_cell, StackLinked<Cell>* stack)
    //DO THIS
    //get row and col from curr_cell
 
-
+	  int row = curr_cell->getRow();
+	  int col = curr_cell->getCol();
 
    //have you solved the maze? (check that we are at the bottom right maze location and that it is a SPACE
-   if (                                                          )  
+   if (row == 21 && col == 31 && )  
    {
 
 
@@ -98,6 +99,7 @@ bool Maze::isSolved(Cell* curr_cell, StackLinked<Cell>* stack)
 
 
    //return the appropriate boolean
+   return fasle;
    
 }
 
