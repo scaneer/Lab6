@@ -70,7 +70,7 @@ T* StackLinked<T>::peek()
 	T* item = NULL;
 	if(!isEmpty())
 	{
-		NextNode<T>* node = new NextNode(item);
+		NextNode<T>* node = new NextNode<T>(item);
 		node = top;
 		item = node->getItem();
 	}
@@ -95,7 +95,7 @@ T* StackLinked<T>::pop()
 	T* item = NULL;
    if(!isEmpty())
    {
-		NextNode<T>* node = new NextNode(item);
+		NextNode<T>* node = new NextNode<T>(item);
 		node = top; 
 		delete top;
 		top = node->getNext();
